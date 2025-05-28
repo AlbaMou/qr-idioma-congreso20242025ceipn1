@@ -1,30 +1,55 @@
 <!DOCTYPE html>
-<html lang="gl">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Zona 1: Información</title>
+    <title>Zona 1 | Elige Idioma</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; background: #f0f0f0; border: none; border-radius: 5px; }
+        .content { display: none; margin: 20px auto; max-width: 600px; text-align: left; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        h1 { color: #333; }
+        strong { color: #0066cc; }
+    </style>
 </head>
 <body>
-  <h2>Escolle un idioma / Choose a language</h2>
-  <button onclick="showText('gl')">Galego</button>
-  <button onclick="showText('es')">Español</button>
-  <button onclick="showText('pt')">Português</button>
-  <button onclick="showText('en')">English</button>
+    <h1>Elige tu idioma / Escolla o teu idioma / Choose your language</h1>
+    <button onclick="showContent('galego')">Galego</button>
+    <button onclick="showContent('español')">Español</button>
+    <button onclick="showContent('portugues')">Português</button>
+    <button onclick="showContent('english')">English</button>
 
-  <div id="text" style="margin-top: 20px; font-size: 18px;"></div>
+    <!-- Contenido en GALLEGO -->
+    <div id="galego" class="content">
+        <h2>Zona un: Información</h2>
+        <p><strong>Descrición:</strong> unha información</p>
+    </div>
 
-  <script>
-    const texts = {
-      gl: "Zona 1: Información.",
-      es: "Zona 1: Información.",
-      pt: "Zona 1: Informação.",
-      en: "Zone 1: Information."
-    };
+    <!-- Contenido en ESPAÑOL -->
+    <div id="español" class="content">
+        <h2>Zona uno: Información</h2>
+        <p><strong>Descripción:</strong> una información</p>
+    </div>
 
-    function showText(lang) {
-      document.getElementById('text').innerText = texts[lang];
-    }
-  </script>
+    <!-- Contenido en PORTUGUÉS -->
+    <div id="portugues" class="content">
+        <h2>Zona um: Informação</h2>
+        <p><strong>Descrição:</strong> uma informação</p>
+    </div>
+
+    <!-- Contenido en INGLÉS -->
+    <div id="english" class="content">
+        <h2>Zone one: Information</h2>
+        <p><strong>Description:</strong> some information</p>
+    </div>
+
+    <script>
+        function showContent(lang) {
+            // Oculta todo el contenido primero
+            document.querySelectorAll('.content').forEach(div => {
+                div.style.display = 'none';
+            });
+            // Muestra el contenido del idioma seleccionado
+            document.getElementById(lang).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
-<!-- Pequeño comentario-->
