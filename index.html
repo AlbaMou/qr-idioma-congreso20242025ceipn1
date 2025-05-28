@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selecciona idioma</title>
+</head>
+<body>
+  <h2>Seleccione su idioma / Select your language</h2>
+  <button onclick="showText('es')">Español</button>
+  <button onclick="showText('en')">English</button>
+  <div id="text" style="margin-top:20px; font-size:18px;"></div>
+
+  <script>
+    const texts = {
+      es: "Hola, este es el texto en español.",
+      en: "Hello, this is the text in English."
+    };
+
+    function showText(lang) {
+      document.getElementById('text').innerText = texts[lang];
+    }
+  </script>
+</body>
+</html>
