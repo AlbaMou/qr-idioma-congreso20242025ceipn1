@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zona 4: O tempo no teu aniversario</title>
+</head>
+<body>
+  <h2>Escolle un idioma / Choose a language</h2>
+  <button onclick="showText('gl')">Galego</button>
+  <button onclick="showText('es')">Español</button>
+  <button onclick="showText('pt')">Português</button>
+  <button onclick="showText('en')">English</button>
+
+  <div id="text" style="margin-top: 20px; font-size: 18px;"></div>
+
+  <script>
+    const texts = {
+      gl: "Zona 4: O tempo no teu aniversario.",
+      es: "Zona 4: El tiempo en tu cumpleaños.",
+      pt: "Zona 4: O tempo no seu aniversário.",
+      en: "Zone 4: The weather on your birthday."
+    };
+
+    function showText(lang) {
+      document.getElementById('text').innerText = texts[lang];
+    }
+  </script>
+</body>
+</html>
